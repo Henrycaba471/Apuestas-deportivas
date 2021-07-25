@@ -249,8 +249,8 @@ button:hover{
 @media only screen and (max-width: 800px){
 
     .header{
-        padding: 0 8px;
-        font-size: 17px;
+        padding: 0;
+        font-size: 14px;
        letter-spacing: -2px;
     }
     .nav{
