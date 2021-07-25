@@ -82,7 +82,7 @@ body{
 .panel-btn{
     position: fixed;
     z-index: 999;
-    top: 0.7vh;
+    top: 1vh;
     right: 1vh;
     width: 3rem;
     height: 3rem;
@@ -249,10 +249,12 @@ button:hover{
 @media only screen and (max-width: 800px){
 
     .header{
-        padding: 0;
-       margin-left: 0;
-        font-size: 10px;
-       letter-spacing: -2px;
+        padding: 0px;
+    }
+    .header .title{
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
     }
     .nav{
         position: fixed;
@@ -276,7 +278,7 @@ button:hover{
     }
     .panel-btn{
         display: block;
-        background-color: transparent;
+        background-color: rgb(84, 165, 17);
     }
     .panel.is-active{
         transform: translate(0,0);

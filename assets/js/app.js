@@ -11,28 +11,28 @@ const d = document,
 
 d.addEventListener("click", (e) => {
     if (e.target.matches("#send")) {
-        let random = Math.round(Math.random() * 8);
+        let random = Math.round(Math.random() * 7);
         e.preventDefault();
         if (EqLocal.value === "") {
-            return result.innerText = ("No has ingresado el equipo Local 🤷‍♂️")
+            return result.textContent = ("No has ingresado el equipo Local 🤷‍♂️")
         }
         if (EqVisitante.value === "") {
-            return result.innerText= ("No has ingresado el equipo Visitante 🤷‍♂️")
+            return result.textContent = ("No has ingresado el equipo Visitante 🤷‍♂️")
         }
         console.log(random);
         result.innerHTML = (`Local: <h3 class="local1">${EqLocal.value}</h3> <img src="assets/images/icons/vs.png" alt="vs" class="vs"/> <br> Visitante: <h3 class="visitante1">${EqVisitante.value}</h3>`);
 
-        if (random <= 3) {
+        if (random <= 2) {
             return apuesta.innerHTML = (`<h3 class="apuesta1">Apuesta: ${EqLocal.value}</h3>`),
             EqLocal.value = "",
             EqVisitante.value = "";
         }
-        if (random > 3 && random <= 5) {
+        if (random > 2 && random <= 4) {
             return apuesta.innerHTML = (`<h3 class="apuesta1">Apuesta: Empate</h3>`),
             EqLocal.value = "",
             EqVisitante.value = "";
         }
-        if (random > 5 && random <= 8) {
+        if (random > 4 && random <= 8) {
             return apuesta.innerHTML = (`<h3 class="apuesta1">Apuesta: ${EqVisitante.value}</h3>`),
             EqLocal.value = "",
             EqVisitante.value = "";
@@ -41,6 +41,7 @@ d.addEventListener("click", (e) => {
 });
 
 function menuHamburguer(panelBtn,panel,linkMenu){
+
     d.addEventListener('click', (e) => {
         if (e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {
             d.querySelector(panel).classList.toggle('is-active');
