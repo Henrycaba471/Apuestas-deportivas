@@ -20,7 +20,7 @@ body{
 }
 
 .header{
-    background-color: rgb(84, 165, 17);
+    background-color:  transparent;
     max-width: 100%;
     margin: auto;
     height: 60px;
