@@ -20,7 +20,7 @@ body{
 }
 
 .header{
-    background-color:  transparent;
+    background-color: rgb(84, 165, 17);
     max-width: 100%;
     margin: auto;
     height: 60px;
@@ -275,7 +275,7 @@ button:hover{
     }
     .panel-btn{
         display: block;
-        background-color: rgb(84, 165, 17);
+        background-color: transparent;
     }
     .panel.is-active{
         transform: translate(0,0);
