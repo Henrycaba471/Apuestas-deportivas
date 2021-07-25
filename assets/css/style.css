@@ -42,6 +42,7 @@ body{
 .header .logo img{
     width: 100px;
     height: auto;
+    margin-right: 8px;
 }
 
 .header .nav a{
@@ -63,6 +64,20 @@ body{
     color: rgba(94, 101, 201, 0.89);
 }
 
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    top: 1vh;
+    right: 1vh;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
 .contenedor{
 	max-width: 100%;
 	margin: auto;
@@ -130,7 +145,7 @@ button{
     transition: all 0.3s ease-out;
 }
 button:hover{
-    background-color: rgba(194, 173, 173, 0.336);
+    background-color: rgba(228, 220, 220, 0.781);
     color: rgb(40, 83, 5);
 }
 
@@ -189,6 +204,7 @@ button:hover{
 
 .resultado{
     text-transform: uppercase;
+    color: red;
 }
 .apuesta1{
     text-transform: uppercase;
@@ -212,4 +228,73 @@ button:hover{
 .vs{
     width: 30px;
     height: auto;
+}
+
+/** Responsive Design*/
+@media only screen and (max-width: 800px){
+
+    .header{
+        padding: 0 15px;
+    }
+    .nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        margin-top: 204px;
+        background-color: rgb(84, 165, 17);
+        width: 50%;
+        right: -15px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease;
+        transform: translate(0,-100%);
+    }
+    .nav a{
+        border-bottom: 1px solid #777;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .panel-btn{
+        display: block;
+        background-color: rgb(84, 165, 17);
+    }
+    .panel.is-active{
+        transform: translate(0,0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    .cont{
+        order: 1;
+    }
+    .left{
+        order: 2;
+    }
+    .right{
+        order: 3;
+    }
+    .footer{
+        font-size: 10px;
+    }
+    .contenedor .cont .sugerencia input{
+        background: rgba(255, 255, 255, 0.514);
+        outline: none;
+        margin-bottom: 20px;
+        border: 2px solid rgba(223, 210, 210, 0.315);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        width: 90%;
+        font-size: 17px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        border-radius: 5px;
+    }
 }
